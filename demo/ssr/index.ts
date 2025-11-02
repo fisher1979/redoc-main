@@ -9,7 +9,7 @@ const yaml = require('js-yaml');
 const http = require('http');
 const fs = require('fs');
 
-const PORT = 9999;
+const PORT = 9991;
 
 const server = http.createServer(async (request, response) => {
   console.time('request ' + request.url);
@@ -52,6 +52,9 @@ const server = http.createServer(async (request, response) => {
     </html>`;
     response.writeHead(200, { 'Content-Length': res.length });
     response.write(res);
+    // INSERT_YOUR_CODE
+    // Output the HTML to the file system as "output-static.html"
+    // fs.writeFileSync('output-static.html', res, 'utf8');
     response.end();
   } else {
     response.writeHead(404);

@@ -28,6 +28,9 @@ try {
   console.error('Skipping REDOC_REVISION');
 }
 
+console.info('VERSION-1', VERSION);
+console.info('REVISION-1', REVISION);
+
 const BANNER = `ReDoc - OpenAPI/Swagger-generated API Reference Documentation
 -------------------------------------------------------------
   Version: ${VERSION}

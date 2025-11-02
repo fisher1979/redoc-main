@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { RedocStandalone } from '../src';
 import ComboBox from './ComboBox';
 import FileInput from './components/FileInput';
+import { DownloadHtmlButton } from './components/DownloadHtmlButton';
 
 const DEFAULT_SPEC = 'museum.yaml';
 const NEW_VERSION_PETSTORE = 'openapi-3-1.yaml';
@@ -110,6 +111,7 @@ class DemoApp extends React.Component<
               <input id="cors_checkbox" type="checkbox" onChange={this.toggleCors} checked={cors} />
               <label htmlFor="cors_checkbox">CORS</label>
             </CorsCheckbox>
+            <DownloadHtmlButton specUrl={specUrl} spec={this.state.spec} />
           </ControlsContainer>
           <iframe
             src="https://ghbtns.com/github-btn.html?user=Redocly&amp;repo=redoc&amp;type=star&amp;count=true&amp;size=large"
